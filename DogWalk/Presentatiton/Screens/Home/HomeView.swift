@@ -43,21 +43,22 @@ struct HomeView: View {
                 .frame(height: height/2)
                 
                 HStack(spacing: 20) {
-                    CommonButton(width: 170, height: 50, cornerradius: 20, backColor: .primaryGreen, text: "함께 산책하기", textFont: .pretendardSemiBold18, rightLogo: .asTestLogo, imageSize: 20)
-                    CommonButton(width: 170, height: 50, cornerradius: 20, backColor: .primaryLime, text: "함께 인증하기", textFont: .pretendardSemiBold18, rightLogo: .asTestLogo, imageSize: 20)
+                    //버튼들
+                    CommonButton(width: 170, height: 50, cornerradius: 20, backColor: .primaryGreen, text: "함께 산책하기  🐾", textFont: .pretendardSemiBold18)
+                    CommonButton(width: 170, height: 50, cornerradius: 20, backColor: .primaryLime, text: "산책 인증하기", textFont: .pretendardSemiBold18, rightLogo: .asTestLogo, imageSize: 20)
                 }
-                .padding(.vertical,5)
+                .padding(.vertical,10)
                 
                 ScrollView(.horizontal) {
                     HStack(spacing: 0) {
                         ForEach(1..<10, id: \.self) {_ in
-                            Image(.testAdCell)
+                            Image(.testAdCell)//광고 이미지
                                 .resizable()
-                                .scaledToFit()
+                                .aspectRatio(contentMode: .fit)
+                                .containerRelativeFrame(.horizontal)//컨테이너에 상대적인 크기를 지정
                         }
                     }
                 }
-                .frame(maxHeight: 100)
                 .scrollTargetBehavior(.paging)
                 
                 Text("인기 산책 인증")
@@ -77,7 +78,6 @@ struct HomeView: View {
                     }
                     .padding(.horizontal)
                 }
-                .frame(maxHeight: 120)
             }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -88,7 +88,6 @@ struct HomeView: View {
                     CommonProfile(image: .asTestProfile, size: 44)
                 }
             }
-            .padding(.vertical)
         }
     }
 }

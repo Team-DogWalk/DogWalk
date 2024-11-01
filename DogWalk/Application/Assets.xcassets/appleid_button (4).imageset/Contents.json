@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "kakaotalk_sharing_btn_small.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "appleid_button@2x (4).png",
       "idiom" : "universal",
       "scale" : "2x"
     },

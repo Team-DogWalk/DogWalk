@@ -9,6 +9,7 @@ import SwiftUI
 
 extension Font {
     // Bagel
+    static let bagelfat50: Font = .custom("BagelFatOne-Regular", size: 50)
     static let bagelfat28: Font = .custom("BagelFatOne-Regular", size: 28)
     static let bagelfat26: Font = .custom("BagelFatOne-Regular", size: 26)
     static let bagelfat24: Font = .custom("BagelFatOne-Regular", size: 24)
@@ -26,6 +27,7 @@ extension Font {
     static let pretendardBlack18: Font = .custom("Pretendard-Black", size: 18)
     static let pretendardBlack19: Font = .custom("Pretendard-Black", size: 19)
     static let pretendardBlack20: Font = .custom("Pretendard-Black", size: 20)
+    static let pretendardBlack30: Font = .custom("Pretendard-Black", size: 30)
     
     // Pretendard - Bold
     static let pretendardBold12: Font = .custom("Pretendard-Bold", size: 12)

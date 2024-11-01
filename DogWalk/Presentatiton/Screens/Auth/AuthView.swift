@@ -12,14 +12,14 @@ struct AuthView: View {
     let height = UIScreen.main.bounds.height
     
     var body: some View {
-            VStack {
-                VStack(spacing: 15) {
-                    Text("반가워요!")
-                        .font(.bagelfat28)
+            VStack {                
+                VStack(spacing: 25) {
+                    Text("반가워요! 🐾")
+                        .font(.bagelfat50)
                         .foregroundColor(Color.primaryBlack)
                     
-                    Text("도그워크와 함께\n즐거운 산책을 시작해볼까요?")
-                        .font(.pretendardBlack20)
+                    Text("우리 댕댕이의 하루를 더 즐겁게!\n 도그워크와 함께 산책을 시작해  보세요!")
+                        .font(.pretendardSemiBold20)
                         .foregroundColor(Color.primaryBlack)
                         .multilineTextAlignment(.center)
                 }
@@ -33,10 +33,17 @@ struct AuthView: View {
                 Spacer()
                 
                 VStack(spacing: 12) {
-                    CommonButton(width: width-width/10, height: width/8, cornerradius: 10, backColor: Color.init(hex: "#FEE500"), text: "KaKao로 시작하기", textFont: .pretendardSemiBold15, textColor: .primaryBlack, leftLogo: Image("kakaotalk_sharing_btn_small"), imageSize: 25)
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Image("kakao_login_medium_wide")
+                            .resizable()
+                            .scaledToFit()
+                    })
                     
-                    CommonButton(width: width-width/10, height: width/8, cornerradius: 10, backColor: Color.primaryBlack, text: "Apple로 계속하기", textFont: .pretendardSemiBold15, textColor: .primaryWhite, leftLogo: Image(systemName: "apple.logo"), imageSize: 20)
-                        .foregroundColor(.primaryWhite)
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Image("appleid_button (4)")
+                            .resizable()
+                            .scaledToFit()
+                    })
                 }
                 .padding(.horizontal, 20)
             }
