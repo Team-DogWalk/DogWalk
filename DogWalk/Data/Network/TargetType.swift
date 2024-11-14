@@ -26,6 +26,9 @@ extension TargetType {
         components?.queryItems = query  // query 사용하는 경우
         
         guard let URL = components?.url else { throw URLError(.badURL) }
+        if let url = components?.url {
+            print("🔍 인코딩된 URL: \(url.absoluteString)")
+        }
         var request = URLRequest(url: URL,
                                  cachePolicy: .reloadIgnoringLocalCacheData,
                                  timeoutInterval: 10)

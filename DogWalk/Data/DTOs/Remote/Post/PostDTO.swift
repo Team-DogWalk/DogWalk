@@ -19,11 +19,14 @@ struct PostDTO: Decodable {
     let files: [String]
     let likes: [String]         // 게시글 좋아요한 사람 목록
     let likes2: [String]         // 게시글 방문한 사람 목록
+<<<<<<< HEAD
     let buyers: [String]
+=======
+>>>>>>> 3220d60 (Fix: getPosts 쿼리 디코딩 수정 및 PostDTO views 프로퍼티 이름 변경)
     let hashTags: [String]
     let comments: [CommentDTO]
     let geolocation: GeolocationDTO
-    let distance: Double
+    let distance: Double?
 }
 
 extension PostDTO {
@@ -49,7 +52,7 @@ extension PostDTO {
                                                                                        profileImage: $0.creator.profileImage ?? ""))},
                          geolocation: GeolocationModel(lat: self.geolocation.latitude,
                                                        lon: self.geolocation.longitude),
-                         distance: self.distance)
+                         distance: self.distance ?? 0.0)
     }
 }
 

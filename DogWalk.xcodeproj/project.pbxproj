@@ -17,6 +17,8 @@
 		06CEA18A2CD398F0003249BF /* ChattingRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CEA1892CD398F0003249BF /* ChattingRoomView.swift */; };
 		06CEA18E2CD3E28E003249BF /* CommonSendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CEA18D2CD3E28E003249BF /* CommonSendView.swift */; };
 		06CEA1902CD52DEF003249BF /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CEA18F2CD52DEE003249BF /* MessageModel.swift */; };
+		993A704B2CE59E6E0003FA0C /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993A704A2CE59E6E0003FA0C /* HomeState.swift */; };
+		993A704D2CE59E800003FA0C /* HomeIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993A704C2CE59E800003FA0C /* HomeIntent.swift */; };
 		9966F6D12CDDE37900E7569E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9966F6D02CDDE37900E7569E /* MainCoordinator.swift */; };
 		9966F6D32CDDE38B00E7569E /* DogWalkCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9966F6D22CDDE38B00E7569E /* DogWalkCoordinatorProtocol.swift */; };
 		9966F6D52CDDE3C500E7569E /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9966F6D42CDDE3C500E7569E /* CoordinatorView.swift */; };
@@ -136,6 +138,8 @@
 		06CEA18D2CD3E28E003249BF /* CommonSendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonSendView.swift; sourceTree = "<group>"; };
 		06CEA18F2CD52DEE003249BF /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		06CEA1932CD7BC1E003249BF /* DogWalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DogWalk.entitlements; sourceTree = "<group>"; };
+		993A704A2CE59E6E0003FA0C /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
+		993A704C2CE59E800003FA0C /* HomeIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntent.swift; sourceTree = "<group>"; };
 		9966F6D02CDDE37900E7569E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		9966F6D22CDDE38B00E7569E /* DogWalkCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogWalkCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9966F6D42CDDE3C500E7569E /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
@@ -652,6 +656,8 @@
 			isa = PBXGroup;
 			children = (
 				C477A2E82CD0E84C006B8DB6 /* HomeView.swift */,
+				993A704A2CE59E6E0003FA0C /* HomeState.swift */,
+				993A704C2CE59E800003FA0C /* HomeIntent.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -941,6 +947,7 @@
 				C4A776922CD1276A00D60EEE /* Container.swift in Sources */,
 				06CEA1862CD23181003249BF /* CommonProfile.swift in Sources */,
 				C477A30E2CD0EB3B006B8DB6 /* CustomTabView.swift in Sources */,
+				993A704D2CE59E800003FA0C /* HomeIntent.swift in Sources */,
 				C477A2FF2CD0E98F006B8DB6 /* SettingView.swift in Sources */,
 				C477A3082CD0EA41006B8DB6 /* Color+.swift in Sources */,
 				C4097B022CD7AF28002155EA /* GetGeoLocationQuery.swift in Sources */,
@@ -1004,6 +1011,7 @@
 				C4097B0D2CD7AF28002155EA /* PostDTO.swift in Sources */,
 				062284A22CE265BB00860F7A /* CommunityIntent.swift in Sources */,
 				C4097B282CE1B36C002155EA /* CreateChattingRoomIntent.swift in Sources */,
+				993A704B2CE59E6E0003FA0C /* HomeState.swift in Sources */,
 				C4097B142CD7AF28002155EA /* ChatRoomResponseDTO.swift in Sources */,
 				C4097B092CD7AF28002155EA /* CommentDTO.swift in Sources */,
 				C4A776902CD126C800D60EEE /* ButtonWrapper.swift in Sources */,
@@ -1171,7 +1179,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.junhee.DogWalk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoonwoo.DogWalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1213,7 +1221,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.junhee.DogWalk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoonwoo.DogWalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
