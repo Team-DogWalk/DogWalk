@@ -13,7 +13,11 @@ struct CoordinatorView: View {
     
     var body: some View {
         NavigationStack(path: $appCoordinator.path) {
+<<<<<<< HEAD
             appCoordinator.build(.tab)
+=======
+            appCoordinator.build(.home)
+>>>>>>> 6a18676 (Refactor: 홈뷰 구조 변경 및 배너, 인기 산책 인증 스크롤뷰 인디케이터 삭제)
                 .navigationDestination(for: Screen.self) { screen in
                     appCoordinator.build(screen)
                 }
