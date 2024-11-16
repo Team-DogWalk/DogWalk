@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct DogWalkApp: App {
     @StateObject var appCoordinator: MainCoordinator = MainCoordinator()
-    private var isUser = UserManager.shared.isUser
+    private var access = UserManager.shared.acess
     let persistenceController = CoreDataManager.shared
     init() {
         let appearance = UINavigationBarAppearance()
@@ -27,7 +27,7 @@ struct DogWalkApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if isUser {
+            if access != "" {
                 ContentView()
                     .environmentObject(appCoordinator)
                     .environment(\.managedObjectContext, persistenceController.viewContext)

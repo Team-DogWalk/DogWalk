@@ -19,10 +19,7 @@ struct PostDTO: Decodable {
     let files: [String]
     let likes: [String]         // 게시글 좋아요한 사람 목록
     let likes2: [String]         // 게시글 방문한 사람 목록
-<<<<<<< HEAD
     let buyers: [String]
-=======
->>>>>>> 3220d60 (Fix: getPosts 쿼리 디코딩 수정 및 PostDTO views 프로퍼티 이름 변경)
     let hashTags: [String]
     let comments: [CommentDTO]
     let geolocation: GeolocationDTO
@@ -66,7 +63,7 @@ enum CommunityCategoryType: String, CaseIterable {
     case free = "자유게시판"
 }
 
-struct PostModel {
+struct PostModel: Identifiable, Hashable {
     let postID: String
     let created: String
     let category: CommunityCategoryType
@@ -80,7 +77,19 @@ struct PostModel {
     let hashTags: [String]
     let comments: [CommentModel]
     let geolocation: GeolocationModel
-    let distance: Double                    // 유저와 포스트의 거리
+    let distance: Double // 유저와 포스트의 거리
+    
+    // List로 사용시 고유값 필요
+    var id: String { postID }
+    
+    static func == (lhs: PostModel, rhs: PostModel) -> Bool {
+            return lhs.postID == rhs.postID
+        }
+
+        // hash(into:) 메서드 구현
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(postID) // 고유한 postID를 사용하여 해시값 생성
+        }
 }
 
 /**

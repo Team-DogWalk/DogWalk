@@ -13,6 +13,7 @@ struct HomeView: View {
     @StateObject var container: Container<HomeIntentProtocol, HomeStateProtocol>
     private var state: HomeStateProtocol { container.state }
     private var intent: HomeIntentProtocol { container.intent }
+    @EnvironmentObject var coordinator: MainCoordinator
     var body: some View {
         NavigationView {
             ScrollView {
@@ -28,14 +29,23 @@ struct HomeView: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     CommonProfile(image: .asTestProfile, size: 44)
+                        .wrapToButton {
+                            intent.profileButtonTap()
+                        }
                 }
             }
-            .task {
-                await NetworkManager().fetchProfile()
+        }
+        .onChange(of: state.isProfileButtonTap) { oldValue, newValue in
+            if newValue {
+                coordinator.push(.setting)
+                intent.resetProfileButtonState()
             }
         }
         .onAppear {
             UserManager.shared.isUser = false
+        }
+        .task {
+            await intent.fetchPostList()
         }
     }
 }
@@ -108,11 +118,13 @@ extension HomeView {
                 .padding(.vertical,5)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
-                    ForEach(1..<10, id: \.self) { _ in
-                        Image(.test)
-                            .resizable()
+                    ForEach(state.popularityDogWalkList, id: \.id) { data in
+                        asImageView(url: "/" + (data.files.first ?? ""))
                             .frame(width: 100, height: 130)
                             .clipShape(.rect(cornerRadius: 15))
+                            .wrapToButton {
+                                print("\(data) 눌림")
+                            }
                     }
                 }
                 .padding(.horizontal)
