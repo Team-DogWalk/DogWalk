@@ -95,91 +95,59 @@ extension PostTarget: TargetType {
     }
     
     var query: [URLQueryItem]? {
-<<<<<<< HEAD
-        let encoder = JSONEncoder()
-        
-        switch self {
-        case .getPosts(let query):
-            do {
-                let data = try encoder.encode(query)
-                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return nil }
-                var items = [URLQueryItem]()
-                for (key, value) in json {
-                    if let array = value as? [Any] {
-                        for element in array {
-                            items.append(URLQueryItem(name: key, value: "\(element)"))
-                        }
-                    } else {
-                        items.append(URLQueryItem(name: key, value: "\(value)"))
-                    }
-                }
-                return items
-            } catch {
-                print("Query to JSON Encode Error!", error)
-                return nil
-            }
-        case .myLikePosts(let query), .myViewPosts(let query), .userPosts(_, let query):
-            do {
-                let data = try encoder.encode(query)
-                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return nil }
-                return json.map { URLQueryItem(name: $0, value: "\($1)")}
-            } catch {
-                print("Query to JSON Encode Error!", error)
-=======
-            let encoder = JSONEncoder()
-            
-            switch self {
-            case .getPosts(let query):
-                do {
-                    let data = try encoder.encode(query)
-                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return nil }
-                    var items = [URLQueryItem]()
-                    for (key, value) in json {
-                        if let array = value as? [Any] {
-                            for element in array {
-                                items.append(URLQueryItem(name: key, value: "\(element)"))
+                let encoder = JSONEncoder()
+                
+                switch self {
+                case .getPosts(let query):
+                    do {
+                        let data = try encoder.encode(query)
+                        guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return nil }
+                        var items = [URLQueryItem]()
+                        for (key, value) in json {
+                            if let array = value as? [Any] {
+                                for element in array {
+                                    items.append(URLQueryItem(name: key, value: "\(element)"))
+                                }
+                            } else {
+                                items.append(URLQueryItem(name: key, value: "\(value)"))
                             }
-                        } else {
-                            items.append(URLQueryItem(name: key, value: "\(value)"))
                         }
+                        return items
+                    } catch {
+                        print("Query to JSON Encode Error!", error)
+                        return nil
                     }
-                    return items
-                } catch {
-                    print("Query to JSON Encode Error!", error)
+                case .myLikePosts(let query), .myViewPosts(let query), .userPosts(_, let query):
+                    do {
+                        let data = try encoder.encode(query)
+                        guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return nil }
+                        return json.map { URLQueryItem(name: $0, value: "\($1)")}
+                    } catch {
+                        print("Query to JSON Encode Error!", error)
+                        return nil
+                    }
+                case .hashtag(let query):
+                    do {
+                        let data = try encoder.encode(query)
+                        guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return nil }
+                        return json.map { URLQueryItem(name: $0, value: "\($1)")}
+                    } catch {
+                        print("Query to JSON Encode Error!", error)
+                        return nil
+                    }
+                case .geolocation(let query):
+                    do {
+                        let data = try encoder.encode(query)
+                        guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return nil }
+                        return json.map { URLQueryItem(name: $0, value: "\($1)")}
+                    } catch {
+                        print("Query to JSON Encode Error!", error)
+                        return nil
+                    }
+                default:
                     return nil
                 }
-            case .myLikePosts(let query), .myViewPosts(let query), .userPosts(_, let query):
-                do {
-                    let data = try encoder.encode(query)
-                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return nil }
-                    return json.map { URLQueryItem(name: $0, value: "\($1)")}
-                } catch {
-                    print("Query to JSON Encode Error!", error)
-                    return nil
-                }
-            case .hashtag(let query):
-                do {
-                    let data = try encoder.encode(query)
-                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return nil }
-                    return json.map { URLQueryItem(name: $0, value: "\($1)")}
-                } catch {
-                    print("Query to JSON Encode Error!", error)
-                    return nil
-                }
-            case .geolocation(let query):
-                do {
-                    let data = try encoder.encode(query)
-                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return nil }
-                    return json.map { URLQueryItem(name: $0, value: "\($1)")}
-                } catch {
-                    print("Query to JSON Encode Error!", error)
-                    return nil
-                }
-            default:
->>>>>>> 3220d60 (Fix: getPosts 쿼리 디코딩 수정 및 PostDTO views 프로퍼티 이름 변경)
-                return nil
             }
-        }
     
     var body: Data? {
         let encoder = JSONEncoder()

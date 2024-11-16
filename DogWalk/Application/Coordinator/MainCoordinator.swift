@@ -48,16 +48,11 @@ final class MainCoordinator: DogWalkCoordinatorProtocol {
         case .tab: CustomTabView()                      // 탭
         case .auth: AuthView()                          // 회원가입
         case .login: LoginView.build()                  // 로그인
-<<<<<<< HEAD
-        case .home: HomeView()                          // 홈
+        case .home: HomeView.build()                    // 홈
         case .map: MapView.build()                      // 산책하기 탭 첫
-=======
-        case .home: HomeView.build()                        // 홈
-        case .map: MapView()                            // 산책하기 탭 첫
->>>>>>> 6a18676 (Refactor: 홈뷰 구조 변경 및 배너, 인기 산책 인증 스크롤뷰 인디케이터 삭제)
         case .dogWalkResult: WalkResultView.build()     // 산책 결과
         case .communityCreate: CommunityCreateView()    // 게시글 작성
-        case .community: CommunityView.build()                // 커뮤니티 리스트 화면
+        case .community: CommunityView.build()          // 커뮤니티 리스트 화면
         case .communityDetail: CommunityDetailView()    // 커뮤니티 게시글 디테일
         case .chatting: ChattingListView.build()        // 채팅방 리스트 화면
         case .chattingRoom: ChattingRoomView()          // 채팅방
