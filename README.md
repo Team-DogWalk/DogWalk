@@ -21,7 +21,7 @@
 
 | **[김윤우](https://github.com/yoonwooiOS)** | **[김준희](https://github.com/dev-junehee)** | **[박성민](https://github.com/sixteenis)** | **[소정섭](https://github.com/wjdtjq6)** |
 | :-: | :-: | :-: | :-: |
-| <a href="https://github.com/dev-junehee"><img src="https://avatars.githubusercontent.com/u/170070172?v=4" width=200px alt="김준희" /> | <a href="https://github.com/sixteenis"><img src="https://avatars.githubusercontent.com/u/116873887?v=4" width=200px alt="김준희" /> | <a href="https://github.com/dev-junehee"><img src="https://avatars.githubusercontent.com/u/71679088?v=4" width=200px alt="김준희" /> | <a href="https://github.com/dev-junehee"><img src="https://avatars.githubusercontent.com/u/71679088?v=4" width=200px alt="김준희" /> |
+| <a href="https://github.com/dev-junehee"><img src="https://avatars.githubusercontent.com/u/170070172?v=4" width=200px alt="김준희" /> | <a href="https://github.com/sixteenis"><img src="https://avatars.githubusercontent.com/u/116873887?v=4" width=200px alt="김준희" /> | <a href="https://github.com/dev-junehee"><img src="https://avatars.githubusercontent.com/u/108184083?s=96&v=4" width=200px alt="김준희" /> | <a href="https://github.com/dev-junehee"><img src="https://avatars.githubusercontent.com/u/71679088?v=4" width=200px alt="김준희" /> |
 
 
 <br />
