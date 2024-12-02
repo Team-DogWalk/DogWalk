@@ -20,7 +20,7 @@ enum UserDefaultsKeys: String {
     case gender              // 성별
     case acess               // acess token
     case refresh             // refresh token
-    case imageCache
+    case imageEtage
     case recentRoomID        // 최근 입장했던 roomID
 }
 

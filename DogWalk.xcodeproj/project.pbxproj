@@ -34,7 +34,6 @@
 		06CEA1902CD52DEF003249BF /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CEA18F2CD52DEE003249BF /* MessageModel.swift */; };
 		993A704B2CE59E6E0003FA0C /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993A704A2CE59E6E0003FA0C /* HomeState.swift */; };
 		993A704D2CE59E800003FA0C /* HomeIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993A704C2CE59E800003FA0C /* HomeIntent.swift */; };
-		993A70DC2CE8B6450003FA0C /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993A70DB2CE8B6450003FA0C /* ImageCacheManager.swift */; };
 		993A70DE2CE8B6890003FA0C /* CommonImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993A70DD2CE8B6890003FA0C /* CommonImageView.swift */; };
 		994775B32CEC6DB90005DBBF /* WeatherKitAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994775B22CEC6DB90005DBBF /* WeatherKitAPIManager.swift */; };
 		994775B62CECA7CF0005DBBF /* CLLocation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994775B52CECA7CF0005DBBF /* CLLocation+.swift */; };
@@ -181,7 +180,6 @@
 		06CEA1932CD7BC1E003249BF /* DogWalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DogWalk.entitlements; sourceTree = "<group>"; };
 		993A704A2CE59E6E0003FA0C /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
 		993A704C2CE59E800003FA0C /* HomeIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntent.swift; sourceTree = "<group>"; };
-		993A70DB2CE8B6450003FA0C /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		993A70DD2CE8B6890003FA0C /* CommonImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonImageView.swift; sourceTree = "<group>"; };
 		994775B22CEC6DB90005DBBF /* WeatherKitAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKitAPIManager.swift; sourceTree = "<group>"; };
 		994775B52CECA7CF0005DBBF /* CLLocation+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+.swift"; sourceTree = "<group>"; };
@@ -640,7 +638,6 @@
 				99BD376A2CF19D14008C135F /* ChatRepository.swift */,
 				068946D72CFD53670043383C /* WeatherRepository.swift */,
 				068946D52CFD44020043383C /* ImageRepository.swift */,
-				993A70DB2CE8B6450003FA0C /* ImageCacheManager.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -1139,7 +1136,6 @@
 				C477A2AA2CD0E594006B8DB6 /* DogWalkApp.swift in Sources */,
 				C4097B032CD7AF28002155EA /* GetHashTagQuery.swift in Sources */,
 				C4097B0D2CD7AF28002155EA /* PostDTO.swift in Sources */,
-				993A70DC2CE8B6450003FA0C /* ImageCacheManager.swift in Sources */,
 				99DF939B2CEEC9830022E471 /* CoreDataManager.swift in Sources */,
 				99DF93A62CEF511E0022E471 /* CoretLastChat.swift in Sources */,
 				062284A22CE265BB00860F7A /* CommunityIntent.swift in Sources */,
