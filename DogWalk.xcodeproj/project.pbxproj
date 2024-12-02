@@ -25,6 +25,7 @@
 		068946D02CFD43DB0043383C /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068946CF2CFD43DB0043383C /* UserRepository.swift */; };
 		068946D22CFD43E20043383C /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068946D12CFD43E20043383C /* PostRepository.swift */; };
 		068946D62CFD44020043383C /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068946D52CFD44020043383C /* ImageRepository.swift */; };
+		068946D82CFD53670043383C /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068946D72CFD53670043383C /* WeatherRepository.swift */; };
 		0689C3602CDB3E9F00C5FC8C /* WalkResultIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0689C35F2CDB3E9F00C5FC8C /* WalkResultIntent.swift */; };
 		0689C3622CDB3EB100C5FC8C /* WalkResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0689C3612CDB3EB100C5FC8C /* WalkResultState.swift */; };
 		06CEA1862CD23181003249BF /* CommonProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CEA1852CD23181003249BF /* CommonProfile.swift */; };
@@ -170,6 +171,7 @@
 		068946CF2CFD43DB0043383C /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		068946D12CFD43E20043383C /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
 		068946D52CFD44020043383C /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		068946D72CFD53670043383C /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
 		0689C35F2CDB3E9F00C5FC8C /* WalkResultIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkResultIntent.swift; sourceTree = "<group>"; };
 		0689C3612CDB3EB100C5FC8C /* WalkResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkResultState.swift; sourceTree = "<group>"; };
 		06CEA1852CD23181003249BF /* CommonProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonProfile.swift; sourceTree = "<group>"; };
@@ -636,6 +638,7 @@
 				068946CF2CFD43DB0043383C /* UserRepository.swift */,
 				068946D12CFD43E20043383C /* PostRepository.swift */,
 				99BD376A2CF19D14008C135F /* ChatRepository.swift */,
+				068946D72CFD53670043383C /* WeatherRepository.swift */,
 				068946D52CFD44020043383C /* ImageRepository.swift */,
 				993A70DB2CE8B6450003FA0C /* ImageCacheManager.swift */,
 			);
@@ -1066,6 +1069,7 @@
 				BF41B0A12CD3BC4500B67485 /* AuthView.swift in Sources */,
 				062284BA2CEC859300860F7A /* CommonErrorView.swift in Sources */,
 				062284AA2CE39CAF00860F7A /* CommunityUseCase.swift in Sources */,
+				068946D82CFD53670043383C /* WeatherRepository.swift in Sources */,
 				C477A2AC2CD0E594006B8DB6 /* ContentView.swift in Sources */,
 				C4097B2D2CE1EF4A002155EA /* LoginView.swift in Sources */,
 				C4097B2F2CE1F2B5002155EA /* TestLoginAccount.swift in Sources */,

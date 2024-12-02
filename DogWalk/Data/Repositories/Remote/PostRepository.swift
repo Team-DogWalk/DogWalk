@@ -7,17 +7,17 @@
 
 import Foundation
 protocol PostRepository {
-    func fetchPosts(category: [String]?, isPaging: Bool) async throws -> [PostModel]
-    func fetchAreaPosts(category: CommunityCategoryType, lon: String, lat: String) async throws -> [PostModel]
-    func fetchDetailPost(id: String) async throws -> PostModel
-    func addContent(id: String, content: String) async throws -> CommentModel
-    func postLike(id: String, status: Bool) async throws -> LikePostModel
-    func writePost(post: PostInput, image: Data?) async throws
+    func fetchPosts(category: [String]?, isPaging: Bool) async throws -> [PostModel] // 전체 포스터 조회
+    func fetchAreaPosts(category: CommunityCategoryType, lon: String, lat: String) async throws -> [PostModel] // 위치 포스터 조회
+    func fetchDetailPost(id: String) async throws -> PostModel // 한개 포스트 조회
+    func addContent(id: String, content: String) async throws -> CommentModel // 댓글 작성
+    func postLike(id: String, status: Bool) async throws -> LikePostModel // 좋아요
+    func writePost(post: PostInput, image: Data?) async throws // 게시글 작성
 }
 final class DefaultPostRepository: PostRepository {
     private let network = NetworkManager()
     private var page = ""
-    //전체 포스터 조회
+    // 전체 포스터 조회
     func fetchPosts(category: [String]?, isPaging: Bool) async throws -> [PostModel] {
         if (isPaging == false) {
             self.page = ""
@@ -29,8 +29,8 @@ final class DefaultPostRepository: PostRepository {
         self.page = decodedResponse.next_cursor
         return decodedResponse.data.map{$0.toDomain()}
     }
-    //위치 포스터 조회
-    func fetchAreaPosts(category: CommunityCategoryType, lon: String, lat: String) async throws -> [PostModel]{
+    // 위치 포스터 조회
+    func fetchAreaPosts(category: CommunityCategoryType, lon: String, lat: String) async throws -> [PostModel] {
         // 1. 기본 URL 설정
         guard var urlComponents = URLComponents(string: APIKey.baseURL + "/posts/geolocation") else {
             throw NetworkError.InvalidURL
@@ -85,7 +85,7 @@ final class DefaultPostRepository: PostRepository {
         let future = try await network.requestDTO(target: .post(.postLike(postID: id, body: body)), of: LikePostDTO.self)
         return future.toDomain()
     }
-    //게시글 작성
+    // 게시글 작성
     func writePost(post: PostInput, image: Data?) async throws {
         let body: PostBody
         if let image {
