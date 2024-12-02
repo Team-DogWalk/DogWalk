@@ -16,6 +16,7 @@ protocol UserRepository {
 }
 final class DefaultUserRepository: UserRepository {
     private let network = NetworkManager()
+    private let userManger = UserManager.shared
     //이메일 로그인
     func emailLogin(id: String, pw: String) async -> Bool {
         do {
@@ -62,10 +63,10 @@ final class DefaultUserRepository: UserRepository {
 
 private extension DefaultUserRepository {
     func setProfile(profile: ProfileModel) {
-        UserManager.shared.userNick = profile.nick
-        UserManager.shared.roadAddress = profile.address
-        UserManager.shared.lon = profile.location.lon
-        UserManager.shared.lat = profile.location.lat
-        UserManager.shared.points = profile.point
+        userManger.userNick = profile.nick
+        userManger.roadAddress = profile.address
+        userManger.lon = profile.location.lon
+        userManger.lat = profile.location.lat
+        userManger.points = profile.point
     }
 }

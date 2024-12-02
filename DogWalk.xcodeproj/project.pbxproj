@@ -24,7 +24,6 @@
 		062284DC2CF30CB700860F7A /* UpdateUserBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062284DB2CF30CB700860F7A /* UpdateUserBody.swift */; };
 		068946D02CFD43DB0043383C /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068946CF2CFD43DB0043383C /* UserRepository.swift */; };
 		068946D22CFD43E20043383C /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068946D12CFD43E20043383C /* PostRepository.swift */; };
-		068946D42CFD43ED0043383C /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068946D32CFD43ED0043383C /* ChatRepository.swift */; };
 		068946D62CFD44020043383C /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068946D52CFD44020043383C /* ImageRepository.swift */; };
 		0689C3602CDB3E9F00C5FC8C /* WalkResultIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0689C35F2CDB3E9F00C5FC8C /* WalkResultIntent.swift */; };
 		0689C3622CDB3EB100C5FC8C /* WalkResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0689C3612CDB3EB100C5FC8C /* WalkResultState.swift */; };
@@ -170,7 +169,6 @@
 		062284DB2CF30CB700860F7A /* UpdateUserBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserBody.swift; sourceTree = "<group>"; };
 		068946CF2CFD43DB0043383C /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		068946D12CFD43E20043383C /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
-		068946D32CFD43ED0043383C /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
 		068946D52CFD44020043383C /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		0689C35F2CDB3E9F00C5FC8C /* WalkResultIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkResultIntent.swift; sourceTree = "<group>"; };
 		0689C3612CDB3EB100C5FC8C /* WalkResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkResultState.swift; sourceTree = "<group>"; };
@@ -340,15 +338,6 @@
 			path = WalkResult;
 			sourceTree = "<group>";
 		};
-		993A70D52CE8B6040003FA0C /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				993A70DB2CE8B6450003FA0C /* ImageCacheManager.swift */,
-			);
-			name = Image;
-			path = DogWalk/Data/Repositories/Local/Image;
-			sourceTree = SOURCE_ROOT;
-		};
 		994775B42CECA5E60005DBBF /* Weather */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,17 +371,8 @@
 				99DF93982CEEC96A0022E471 /* PersistentContainer.swift */,
 				99DF939A2CEEC9830022E471 /* CoreDataManager.swift */,
 				99DF93A22CEF4F8D0022E471 /* CustomType */,
-				9966F6EF2CE2206900E7569E /* Repository */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		9966F6EF2CE2206900E7569E /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				99BD376A2CF19D14008C135F /* ChatRepository.swift */,
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		99BD37612CF0AB06008C135F /* Security */ = {
@@ -645,7 +625,6 @@
 		C477A2C12CD0E697006B8DB6 /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				993A70D52CE8B6040003FA0C /* Image */,
 				C4A776892CD125B800D60EEE /* User */,
 			);
 			path = Local;
@@ -656,8 +635,9 @@
 			children = (
 				068946CF2CFD43DB0043383C /* UserRepository.swift */,
 				068946D12CFD43E20043383C /* PostRepository.swift */,
-				068946D32CFD43ED0043383C /* ChatRepository.swift */,
+				99BD376A2CF19D14008C135F /* ChatRepository.swift */,
 				068946D52CFD44020043383C /* ImageRepository.swift */,
+				993A70DB2CE8B6450003FA0C /* ImageCacheManager.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -1149,7 +1129,6 @@
 				C477A2E02CD0E80B006B8DB6 /* DefaultSomeUseCase.swift in Sources */,
 				C4D48E7F2CE352E5006E39A0 /* ChattingResponseDTO.swift in Sources */,
 				C477A2FB2CD0E984006B8DB6 /* CommunityCreateView.swift in Sources */,
-				068946D42CFD43ED0043383C /* ChatRepository.swift in Sources */,
 				C4097B112CD7AF28002155EA /* PostChatFileBody.swift in Sources */,
 				99BD376B2CF19D14008C135F /* ChatRepository.swift in Sources */,
 				99DF93A42CEF4FA30022E471 /* CoreUser.swift in Sources */,

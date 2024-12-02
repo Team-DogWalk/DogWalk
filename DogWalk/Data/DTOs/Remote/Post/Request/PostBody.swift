@@ -17,3 +17,12 @@ struct PostBody: Encodable {
     let longitude: Double
     let latitude: Double
 }
+
+struct PostInput {
+    let category: String
+    let title: String
+    let price: Int
+    let content: String
+    let longitude: Double
+    let latitude: Double
+}
