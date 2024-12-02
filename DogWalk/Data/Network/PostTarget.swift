@@ -80,7 +80,7 @@ extension PostTarget: TargetType {
                 BaseHeader.sesacKey.rawValue: APIKey.key,
             ]
             /// productID, application/json, authorizaiton, sesacKey
-        case .post, .putPost, .deletePost, .postLike, .postView, .addContent:
+        case .post, .putPost, .deletePost, .postLike, .postView, .addContent://, .getEtage
             return [
                 BaseHeader.productId.rawValue: APIKey.appID,
                 BaseHeader.contentType.rawValue: BaseHeader.json.rawValue,

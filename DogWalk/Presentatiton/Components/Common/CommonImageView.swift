@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct asImageView: View {
-    let imageCacheManager = ImageCacheManager()
+    let imageRepository = ImageRepository()
     let url: String
     let saveType: ImageSaveType
     @State private var image: Image
@@ -22,9 +22,16 @@ struct asImageView: View {
             .resizable()
             .aspectRatio(contentMode: .fill)
             .task {
-                let result = await imageCacheManager.getImage(url, saveType: saveType)
-                image = Image(uiImage: result)
-                let _ = print(#function, url)
+                do {
+                    let result = try await imageRepository.getImageData(url: url, saveType: saveType)
+                    if let imageData = result, let uiImage = UIImage(data: imageData) {
+                        image = Image(uiImage: uiImage)
+                    } else {
+                        image = Image.asTestImage
+                    }
+                } catch {
+                    print("이미지 처리 오류 발생!!!")
+                }
             }
     }
 }

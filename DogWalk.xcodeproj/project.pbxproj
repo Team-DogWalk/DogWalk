@@ -22,7 +22,10 @@
 		062284C92CEF24B000860F7A /* FileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062284C82CEF24B000860F7A /* FileDTO.swift */; };
 		062284CB2CEF2C0C00860F7A /* ImageUploadBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062284CA2CEF2C0C00860F7A /* ImageUploadBody.swift */; };
 		062284DC2CF30CB700860F7A /* UpdateUserBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062284DB2CF30CB700860F7A /* UpdateUserBody.swift */; };
-		062284FB2CF55C6100860F7A /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 062284F92CF55C6100860F7A /* CoreDataModel.xcdatamodeld */; };
+		068946D02CFD43DB0043383C /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068946CF2CFD43DB0043383C /* UserRepository.swift */; };
+		068946D22CFD43E20043383C /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068946D12CFD43E20043383C /* PostRepository.swift */; };
+		068946D62CFD44020043383C /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068946D52CFD44020043383C /* ImageRepository.swift */; };
+		068946D82CFD53670043383C /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068946D72CFD53670043383C /* WeatherRepository.swift */; };
 		0689C3602CDB3E9F00C5FC8C /* WalkResultIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0689C35F2CDB3E9F00C5FC8C /* WalkResultIntent.swift */; };
 		0689C3622CDB3EB100C5FC8C /* WalkResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0689C3612CDB3EB100C5FC8C /* WalkResultState.swift */; };
 		06CEA1862CD23181003249BF /* CommonProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CEA1852CD23181003249BF /* CommonProfile.swift */; };
@@ -31,7 +34,6 @@
 		06CEA1902CD52DEF003249BF /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CEA18F2CD52DEE003249BF /* MessageModel.swift */; };
 		993A704B2CE59E6E0003FA0C /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993A704A2CE59E6E0003FA0C /* HomeState.swift */; };
 		993A704D2CE59E800003FA0C /* HomeIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993A704C2CE59E800003FA0C /* HomeIntent.swift */; };
-		993A70DC2CE8B6450003FA0C /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993A70DB2CE8B6450003FA0C /* ImageCacheManager.swift */; };
 		993A70DE2CE8B6890003FA0C /* CommonImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993A70DD2CE8B6890003FA0C /* CommonImageView.swift */; };
 		994775B32CEC6DB90005DBBF /* WeatherKitAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994775B22CEC6DB90005DBBF /* WeatherKitAPIManager.swift */; };
 		994775B62CECA7CF0005DBBF /* CLLocation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994775B52CECA7CF0005DBBF /* CLLocation+.swift */; };
@@ -113,8 +115,6 @@
 		C477A2CD2CD0E729006B8DB6 /* DefaultLocalDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C477A2CC2CD0E729006B8DB6 /* DefaultLocalDTO.swift */; };
 		C477A2CF2CD0E743006B8DB6 /* DefaultRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C477A2CE2CD0E743006B8DB6 /* DefaultRemoteDataSource.swift */; };
 		C477A2D12CD0E74C006B8DB6 /* DefaultLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C477A2D02CD0E74C006B8DB6 /* DefaultLocalDataSource.swift */; };
-		C477A2D52CD0E786006B8DB6 /* DefaultRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C477A2D42CD0E786006B8DB6 /* DefaultRemoteRepository.swift */; };
-		C477A2D72CD0E792006B8DB6 /* DefaultLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C477A2D62CD0E792006B8DB6 /* DefaultLocalRepository.swift */; };
 		C477A2DC2CD0E7F4006B8DB6 /* DefaultSomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C477A2DB2CD0E7F4006B8DB6 /* DefaultSomeType.swift */; };
 		C477A2DE2CD0E800006B8DB6 /* DefaultSomeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C477A2DD2CD0E800006B8DB6 /* DefaultSomeInterface.swift */; };
 		C477A2E02CD0E80B006B8DB6 /* DefaultSomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C477A2DF2CD0E80B006B8DB6 /* DefaultSomeUseCase.swift */; };
@@ -167,7 +167,10 @@
 		062284C82CEF24B000860F7A /* FileDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDTO.swift; sourceTree = "<group>"; };
 		062284CA2CEF2C0C00860F7A /* ImageUploadBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadBody.swift; sourceTree = "<group>"; };
 		062284DB2CF30CB700860F7A /* UpdateUserBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserBody.swift; sourceTree = "<group>"; };
-		062284FA2CF55C6100860F7A /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		068946CF2CFD43DB0043383C /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		068946D12CFD43E20043383C /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		068946D52CFD44020043383C /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		068946D72CFD53670043383C /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
 		0689C35F2CDB3E9F00C5FC8C /* WalkResultIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkResultIntent.swift; sourceTree = "<group>"; };
 		0689C3612CDB3EB100C5FC8C /* WalkResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkResultState.swift; sourceTree = "<group>"; };
 		06CEA1852CD23181003249BF /* CommonProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonProfile.swift; sourceTree = "<group>"; };
@@ -177,7 +180,6 @@
 		06CEA1932CD7BC1E003249BF /* DogWalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DogWalk.entitlements; sourceTree = "<group>"; };
 		993A704A2CE59E6E0003FA0C /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
 		993A704C2CE59E800003FA0C /* HomeIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntent.swift; sourceTree = "<group>"; };
-		993A70DB2CE8B6450003FA0C /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		993A70DD2CE8B6890003FA0C /* CommonImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonImageView.swift; sourceTree = "<group>"; };
 		994775B22CEC6DB90005DBBF /* WeatherKitAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKitAPIManager.swift; sourceTree = "<group>"; };
 		994775B52CECA7CF0005DBBF /* CLLocation+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+.swift"; sourceTree = "<group>"; };
@@ -259,8 +261,6 @@
 		C477A2CC2CD0E729006B8DB6 /* DefaultLocalDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLocalDTO.swift; sourceTree = "<group>"; };
 		C477A2CE2CD0E743006B8DB6 /* DefaultRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRemoteDataSource.swift; sourceTree = "<group>"; };
 		C477A2D02CD0E74C006B8DB6 /* DefaultLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLocalDataSource.swift; sourceTree = "<group>"; };
-		C477A2D42CD0E786006B8DB6 /* DefaultRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRemoteRepository.swift; sourceTree = "<group>"; };
-		C477A2D62CD0E792006B8DB6 /* DefaultLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLocalRepository.swift; sourceTree = "<group>"; };
 		C477A2DB2CD0E7F4006B8DB6 /* DefaultSomeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSomeType.swift; sourceTree = "<group>"; };
 		C477A2DD2CD0E800006B8DB6 /* DefaultSomeInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSomeInterface.swift; sourceTree = "<group>"; };
 		C477A2DF2CD0E80B006B8DB6 /* DefaultSomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSomeUseCase.swift; sourceTree = "<group>"; };
@@ -338,15 +338,6 @@
 			path = WalkResult;
 			sourceTree = "<group>";
 		};
-		993A70D52CE8B6040003FA0C /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				993A70DB2CE8B6450003FA0C /* ImageCacheManager.swift */,
-			);
-			name = Image;
-			path = DogWalk/Data/Repositories/Local/Image;
-			sourceTree = SOURCE_ROOT;
-		};
 		994775B42CECA5E60005DBBF /* Weather */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,17 +371,8 @@
 				99DF93982CEEC96A0022E471 /* PersistentContainer.swift */,
 				99DF939A2CEEC9830022E471 /* CoreDataManager.swift */,
 				99DF93A22CEF4F8D0022E471 /* CustomType */,
-				9966F6EF2CE2206900E7569E /* Repository */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		9966F6EF2CE2206900E7569E /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				99BD376A2CF19D14008C135F /* ChatRepository.swift */,
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		99BD37612CF0AB06008C135F /* Security */ = {
@@ -643,9 +625,7 @@
 		C477A2C12CD0E697006B8DB6 /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				993A70D52CE8B6040003FA0C /* Image */,
 				C4A776892CD125B800D60EEE /* User */,
-				C477A2D62CD0E792006B8DB6 /* DefaultLocalRepository.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -653,7 +633,11 @@
 		C477A2C22CD0E69F006B8DB6 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				C477A2D42CD0E786006B8DB6 /* DefaultRemoteRepository.swift */,
+				068946CF2CFD43DB0043383C /* UserRepository.swift */,
+				068946D12CFD43E20043383C /* PostRepository.swift */,
+				99BD376A2CF19D14008C135F /* ChatRepository.swift */,
+				068946D72CFD53670043383C /* WeatherRepository.swift */,
+				068946D52CFD44020043383C /* ImageRepository.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -1041,13 +1025,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4097AFF2CD7AF28002155EA /* MyProfileDTO.swift in Sources */,
+				068946D22CFD43E20043383C /* PostRepository.swift in Sources */,
 				99BD37632CF0AB23008C135F /* APIKey.swift in Sources */,
 				C4097ACF2CD7AEF5002155EA /* NetworkManager.swift in Sources */,
 				C4097B002CD7AF28002155EA /* UserProfileDTO.swift in Sources */,
 				994775B62CECA7CF0005DBBF /* CLLocation+.swift in Sources */,
 				0689C3622CDB3EB100C5FC8C /* WalkResultState.swift in Sources */,
 				C4A7768B2CD125D200D60EEE /* UserDefaults.swift in Sources */,
-				C477A2D52CD0E786006B8DB6 /* DefaultRemoteRepository.swift in Sources */,
 				C477A30A2CD0EA6C006B8DB6 /* Frame+.swift in Sources */,
 				C477A2E92CD0E84C006B8DB6 /* HomeView.swift in Sources */,
 				9966F6D32CDDE38B00E7569E /* DogWalkCoordinatorProtocol.swift in Sources */,
@@ -1078,9 +1062,11 @@
 				C4097B152CD7AF28002155EA /* LastChatDTO.swift in Sources */,
 				C477A2F52CD0E959006B8DB6 /* CommonButton.swift in Sources */,
 				C41F67EA2CECAE92003BCCCC /* ChattingListUseCase.swift in Sources */,
+				068946D62CFD44020043383C /* ImageRepository.swift in Sources */,
 				BF41B0A12CD3BC4500B67485 /* AuthView.swift in Sources */,
 				062284BA2CEC859300860F7A /* CommonErrorView.swift in Sources */,
 				062284AA2CE39CAF00860F7A /* CommunityUseCase.swift in Sources */,
+				068946D82CFD53670043383C /* WeatherRepository.swift in Sources */,
 				C477A2AC2CD0E594006B8DB6 /* ContentView.swift in Sources */,
 				C4097B2D2CE1EF4A002155EA /* LoginView.swift in Sources */,
 				C4097B2F2CE1F2B5002155EA /* TestLoginAccount.swift in Sources */,
@@ -1108,13 +1094,13 @@
 				C4097AD52CD7AEF5002155EA /* APITarget.swift in Sources */,
 				99DF93952CEEC92B0022E471 /* CoreChatMessage.swift in Sources */,
 				062284BE2CEC8CA800860F7A /* CommentBody.swift in Sources */,
-				C477A2D72CD0E792006B8DB6 /* DefaultLocalRepository.swift in Sources */,
 				C41F67E02CEB5429003BCCCC /* SocketDMDTO.swift in Sources */,
 				993A70DE2CE8B6890003FA0C /* CommonImageView.swift in Sources */,
 				994775B32CEC6DB90005DBBF /* WeatherKitAPIManager.swift in Sources */,
 				C4097B192CDB0921002155EA /* HTTPMethod.swift in Sources */,
 				062284B82CEC707900860F7A /* CommunityDetailUseCase.swift in Sources */,
 				C4097B242CE1B286002155EA /* ChattingListIntent.swift in Sources */,
+				068946D02CFD43DB0043383C /* UserRepository.swift in Sources */,
 				C4097AD62CD7AEF5002155EA /* PostTarget.swift in Sources */,
 				99825E0C2CF1EBF10004631E /* CDTestView.swift in Sources */,
 				9966F6D52CDDE3C500E7569E /* CoordinatorView.swift in Sources */,
@@ -1150,7 +1136,6 @@
 				C477A2AA2CD0E594006B8DB6 /* DogWalkApp.swift in Sources */,
 				C4097B032CD7AF28002155EA /* GetHashTagQuery.swift in Sources */,
 				C4097B0D2CD7AF28002155EA /* PostDTO.swift in Sources */,
-				993A70DC2CE8B6450003FA0C /* ImageCacheManager.swift in Sources */,
 				99DF939B2CEEC9830022E471 /* CoreDataManager.swift in Sources */,
 				99DF93A62CEF511E0022E471 /* CoretLastChat.swift in Sources */,
 				062284A22CE265BB00860F7A /* CommunityIntent.swift in Sources */,
@@ -1428,7 +1413,6 @@
 				BFBD1F152CF5688800E349F4 /* CoreDataModel.xcdatamodel */,
 			);
 			currentVersion = BFBD1F152CF5688800E349F4 /* CoreDataModel.xcdatamodel */;
-			name = CoreDataModel.xcdatamodeld;
 			path = CoreDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
