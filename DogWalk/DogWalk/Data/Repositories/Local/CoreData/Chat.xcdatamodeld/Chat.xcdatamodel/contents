@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="ChatMessage" representedClassName="ChatMessage" syncable="YES" codeGenerationType="class">
+        <attribute name="chatRoomID" optional="YES" attributeType="String"/>
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="photoFiles" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+        <attribute name="roomID" optional="YES" attributeType="String"/>
+        <attribute name="senderNick" optional="YES" attributeType="String"/>
+        <attribute name="senderProfileImage" optional="YES" attributeType="String"/>
+        <attribute name="senderUserID" optional="YES" attributeType="String"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChatRoom" inverseName="messages" inverseEntity="ChatRoom"/>
+    </entity>
+    <entity name="ChatRoom" representedClassName="ChatRoom" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lastChatContent" optional="YES" attributeType="String"/>
+        <attribute name="lastChatNick" optional="YES" attributeType="String"/>
+        <attribute name="participantID" optional="YES" attributeType="String"/>
+        <attribute name="participantNick" optional="YES" attributeType="String"/>
+        <attribute name="participantProfileImage" optional="YES" attributeType="String"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ChatMessage" inverseName="room" inverseEntity="ChatMessage"/>
+    </entity>
+</model>

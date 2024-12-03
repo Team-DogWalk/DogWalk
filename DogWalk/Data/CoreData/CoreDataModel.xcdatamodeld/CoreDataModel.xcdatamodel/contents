@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CoreDataChatMessage" representedClassName="CoreDataChatMessage" syncable="YES" codeGenerationType="class">
+        <attribute name="chatID" optional="YES" attributeType="String"/>
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="files" optional="YES" attributeType="Transformable" valueTransformerName="StringArrayTransformer" customClassName="[String]"/>
+        <attribute name="roomID" optional="YES" attributeType="String"/>
+        <attribute name="sender" optional="YES" attributeType="Transformable" valueTransformerName="CoreUserTransformer" customClassName="CoreUser"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="chatRoom" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CoreDataChatRoom" inverseName="message" inverseEntity="CoreDataChatRoom"/>
+    </entity>
+    <entity name="CoreDataChatRoom" representedClassName="CoreDataChatRoom" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="lastChat" optional="YES" attributeType="Transformable" valueTransformerName="CoreLastChatTransformer" customClassName="CoreLastChat"/>
+        <attribute name="me" optional="YES" attributeType="Transformable" valueTransformerName="CoreUserTransformer" customClassName="CoreUser"/>
+        <attribute name="other" optional="YES" attributeType="Transformable" valueTransformerName="CoreUserTransformer" customClassName="CoreUser"/>
+        <attribute name="roomID" optional="YES" attributeType="String"/>
+        <attribute name="updatedAt" optional="YES" attributeType="String"/>
+        <relationship name="message" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CoreDataChatMessage" inverseName="chatRoom" inverseEntity="CoreDataChatMessage"/>
+    </entity>
+</model>
